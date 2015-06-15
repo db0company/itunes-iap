@@ -16,7 +16,13 @@ if PY3:
     __version__ = __version__.decode('ascii')
 VERSION = tuple(int(v) for v in __version__.split('.'))
 
-from .core import Request, Receipt, set_verification_mode, get_verification_mode
-from .exceptions import InvalidReceipt, ModeNotAvailable, RequestError
+
+from .request import Request
+from .receipt import Response, Receipt, InApp
 from .shortcut import verify
 
+from . import exceptions
+exc = exceptions
+
+from . import environment
+env = environment  # env.default, env.sandbox, env.review

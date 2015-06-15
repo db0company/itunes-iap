@@ -3,4 +3,9 @@ dist
 .env
 *.pyc
 *.egg-info
-MANIFEST
+MANIFEST*
+
+.idea
+.tox
+/build
+setup.cfg
